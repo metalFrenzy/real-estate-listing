@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.title {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #181633;
+    line-height: 1.2;
+
+    span {
+        display: block; // Forces "with Nawy" to be on its own line
+    }
+}
+
+.subtitle {
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #181633;
+
+    span {
+        display: block; // Forces "with Nawy" to be on its own line
+    }
+}
+
+.cover-page {
+    background-image: url('/assets/Background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .cover-page {
+        background-image: url('/assets/Background.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        text-align: left;
+    }
+}

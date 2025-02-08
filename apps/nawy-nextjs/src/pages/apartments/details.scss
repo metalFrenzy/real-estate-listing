@@ -1,0 +1,83 @@
+.title-area {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 35% 30% 25%;
+  align-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.area {
+  border: 1px solid #0036c0;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: #0036c0;
+  font-weight: 500;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+
+.price {
+  display: grid;
+  justify-self: end;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.description {
+  margin: 2rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.feats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.bathrooms,
+.bedrooms,
+.size {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #0036c0;
+  border-radius: 10px;
+  color: white;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  price {
+    font-size: 0.8rem;
+  }
+
+  .area {
+    font-size: 0.8rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .bathrooms {
+    font-size: 0.8rem;
+  }
+    .bedrooms {
+        font-size: 0.8rem;
+    }
+    .size {
+        font-size: 0.8rem;
+    }
+    .feats {
+        grid-template-columns: 1fr;
+    }
+    
+}

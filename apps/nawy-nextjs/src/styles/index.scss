@@ -1,0 +1,21 @@
+.heading {
+    color: #181633;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.apartments-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .apartments-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}

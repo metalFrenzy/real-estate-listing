@@ -1,0 +1,82 @@
+$house-black: #181633;
+
+.apartment-card {
+    background-color: #DBEBF4;
+    width: 25vw;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.apartment-details {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    font-size: 1rem; 
+}
+
+.apartment-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.price-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 500;
+    color: $house-black;
+}
+
+.view-details {
+    background-color: #0036C0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.view-details:hover {
+    background-color: #053ecd;
+    scale: 1.05;
+}
+
+.title-type {
+    font-weight: 500;
+    color: $house-black;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .apartment-card {
+        width: 90vw;
+    }
+
+    .apartment-details {
+        font-size: 0.875rem;
+    }
+
+    .title-type {
+        font-size: 1rem;
+    }
+
+    .apartment-info {
+        grid-template-columns: 1fr;
+    }
+
+    .price-button {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-details {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}

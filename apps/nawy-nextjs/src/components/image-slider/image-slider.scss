@@ -1,0 +1,33 @@
+.image-slider {
+    width: 50vw;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.controls > button {
+    border-radius: 10px;
+    background-color: #d7d8da;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.controls > button:hover {
+    background-color: #b0bad2;
+    transform: scale(1.05);
+}
