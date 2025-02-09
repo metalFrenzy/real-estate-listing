@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { ApartmentsService } from './apartments.service';
 import { Apartment } from './data/apartments.entity';
 
@@ -13,6 +13,16 @@ export class ApartmentsController {
     @Get()
     getApartments(): Promise<Apartment[]> {
         return this.apartmentsService.getApartments();
+    }
+
+    /**
+    * Fetch apartments with search and filter functionality.
+    * @param query Filter parameters (unitName, unitNumber, project).
+    * @returns an array of Apartment entities
+    */
+    @Get('search')
+    searchApartments(@Query('title') title?: string, @Query('developer') developer?: string): Promise<Apartment[]> {
+        return this.apartmentsService.searchApartments(title, developer);
     }
 
     @Get(':id')

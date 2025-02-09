@@ -17,4 +17,9 @@ export class ApartmentsService {
     addApartment(apartment: Partial<Apartment>): Promise<Apartment> {
         return this.apartmentsRepository.createApartment(apartment)
     }
+
+      searchApartments(title?: string, developer?: string): Promise<Apartment[]> {
+        return this.apartmentsRepository.searchApartments(title, developer);
+    }
+
 }

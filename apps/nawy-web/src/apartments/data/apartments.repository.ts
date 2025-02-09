@@ -37,4 +37,23 @@ export class ApartmentsRepository {
         const newApartment = this.repository.create(apartment);
         return this.repository.save(newApartment);
     }
+
+     /**
+     * Searches for apartments based on title and/or developer.
+     */
+     async searchApartments(title?: string, developer?: string): Promise<Apartment[]> {
+        const qb = this.repository.createQueryBuilder('apartment');
+
+        if (title) {
+            qb.andWhere('apartment.title ILIKE :title', { title: `%${title}%` });
+        }
+
+        if (developer) {
+            qb.andWhere('apartment.developer ILIKE :developer', { developer: `%${developer}%` });
+        }
+
+        return qb.getMany();
+    }
+
+    
 }
