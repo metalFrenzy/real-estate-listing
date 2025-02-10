@@ -30,6 +30,8 @@ services:
       - db
     networks:
       - nawy-network
+    command: >
+      sh -c "npm run build && npm run migration:run && npm run start"
 
   db:
     image: postgres:15
