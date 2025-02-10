@@ -8,11 +8,12 @@ services:
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:4000  
+      NEXT_PUBLIC_API_URL: http://backend:4000  
     depends_on:
       - backend
     networks:
       - nawy-network
+    command: sh -c "while ! curl -s http://backend:4000 > /dev/null; do sleep 2; done; npm run start"
 
   backend:
     build:
@@ -30,6 +31,11 @@ services:
       - db
     networks:
       - nawy-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     command: >
       sh -c "npm run build && npm run migration:run && npm run start"
 
