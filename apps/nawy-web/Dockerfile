@@ -11,8 +11,11 @@ RUN npm install
 # 4. Copy the rest of the application
 COPY . .
 
-# 5. Expose port for the application
+# 5. Build the application
+RUN npm run build
+
+# 6. Expose port for the application
 EXPOSE 4000
 
-# 6. Default command to start the app
-CMD ["npm", "run", "start:dev"]
+# 7. Default command to start the app
+CMD ["sh", "-c", "npm run migration:run && npm run start:dev"]
