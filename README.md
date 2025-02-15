@@ -36,7 +36,7 @@ DB_NAME=apartment_db
 PORT=4000
 ```
 
-#### Frontend `.env.local` file (`nawy-nextjs/.env.local`)
+#### Frontend `.env` file (`nawy-nextjs/.env`)
 
 ```ini
 NEXT_PUBLIC_API_URL=http://localhost:4000
@@ -116,23 +116,5 @@ To stop Docker containers, run:
 ```sh
 docker-compose down
 ```
-
----
-
-## 📝 Notes
-
-- If using **Docker**, make sure `NEXT_PUBLIC_API_URL` in `nawy-nextjs/.env.local` is set to:
-
-  ```ini
-  NEXT_PUBLIC_API_URL=http://backend:4000
-  ```
-
-  Otherwise, for **local development**, set it to:
-
-  ```ini
-  NEXT_PUBLIC_API_URL=http://localhost:4000
-  ```
-
-- Run migrations before starting the backend to ensure the database is properly set up.
 
 
