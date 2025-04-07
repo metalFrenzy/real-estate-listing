@@ -1,6 +1,7 @@
 import axios from "axios";
 import { ApartmentRequest } from "@/viewmodels/request/apartment.request";
 import { ApartmentResponse } from "@/viewmodels/response/apartments.viewmodel";
+import { ApartmentDtoResponse } from "@/viewmodels/response/apartments.dto.viewmodel";
 
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -9,7 +10,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
  * Fetches a list of apartments from the API.
  * @returns {Promise<ApartmentResponse[]>} A promise that resolves to an array of ApartmentResponse objects.
  */
-export const getApartments = async ():Promise<ApartmentResponse[]> => {
+export const getApartments = async ():Promise<ApartmentDtoResponse[]> => {
     const response = await axios.get<ApartmentResponse[]>(`${BASE_URL}/apartments`);
     return response.data;
 }
