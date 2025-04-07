@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { ApartmentsService } from './apartments.service';
 import { Apartment } from './data/apartments.entity';
+import { ApartmentDto } from './data/apartment.dto';
 
 @Controller('apartments')
 export class ApartmentsController {
@@ -11,7 +12,7 @@ export class ApartmentsController {
      * @returns an array of Apartment entites
      */
     @Get()
-    getApartments(): Promise<Apartment[]> {
+    getApartments(): Promise<ApartmentDto[]> {
         return this.apartmentsService.getApartments();
     }
 
