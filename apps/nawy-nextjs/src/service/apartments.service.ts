@@ -8,7 +8,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 /**
  * Fetches a list of apartments from the API.
- * @returns {Promise<ApartmentResponse[]>} A promise that resolves to an array of ApartmentResponse objects.
+ * @returns {Promise<ApartmentDtoResponse[]>} A promise that resolves to an array of ApartmentResponse objects.
  */
 export const getApartments = async ():Promise<ApartmentDtoResponse[]> => {
     const response = await axios.get<ApartmentResponse[]>(`${BASE_URL}/apartments`);
