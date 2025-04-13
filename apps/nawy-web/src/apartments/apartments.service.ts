@@ -10,7 +10,9 @@ export class ApartmentsService {
     async getApartments(): Promise<ApartmentDto[]> {
         const apartments = await this.apartmentsRepository.findAll();
         return apartments.map((apartment) => ({
+            id: apartment.id,
             title: apartment.title,
+            type: apartment.type,
             area: apartment.area,
             bedrooms: apartment.bedrooms,
             bathrooms: apartment.bathrooms,
