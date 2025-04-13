@@ -1,6 +1,8 @@
 export interface ApartmentDtoResponse {
+    id: number;
     title: string;
     area: string;
+    type: string;
     bedrooms: number;
     bathrooms: number;
     size: number;
