@@ -1,14 +1,14 @@
 import { GetServerSideProps } from "next";
 import { getApartments } from "@/service/apartments.service";
-import { ApartmentResponse } from "@/viewmodels/response/apartments.viewmodel";
 import CoverPage from "@/components/cover/cover-page";
 import '../styles/index.scss';
 import ApartmentsCard from "@/components/apartments-card/apartments-card";
+import { ApartmentDtoResponse } from "@/viewmodels/response/apartments.dto.viewmodel";
 
 
 
 interface HomePageProps {
-    apartments: ApartmentResponse[];
+    apartments: ApartmentDtoResponse[];
 }
 
 const HomePage: React.FC<HomePageProps> = ({ apartments }) => {

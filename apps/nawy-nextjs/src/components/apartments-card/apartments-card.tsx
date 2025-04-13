@@ -1,10 +1,10 @@
-import { ApartmentResponse } from "@/viewmodels/response/apartments.viewmodel";
 import Image from 'next/image';
 import './apartments-card.scss';
 import { useRouter } from "next/router";
+import { ApartmentDtoResponse } from "@/viewmodels/response/apartments.dto.viewmodel";
 
 interface ApartmentsCardProps {
-    apartment: ApartmentResponse;
+    apartment: ApartmentDtoResponse;
 }
 
 const ApartmentsCard: React.FC<ApartmentsCardProps> = ({ apartment }) => {
