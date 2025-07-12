@@ -21,27 +21,6 @@ This project is a full-stack application for listing apartments, built with:
 git clone https://github.com/yourusername/nawy-apartment-listing.git](https://github.com/metalFrenzy/nawy.git
 ```
 
-### 2️⃣ Set Up Environment Variables
-
-Create `.env ` file for the **backend** and  .`.env.local` for the **forntend**.
-
-#### Backend `.env` file (`nawy-web/.env`)
-
-```ini
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=1517
-DB_NAME=apartment_db
-PORT=4000
-```
-
-#### Frontend `.env` file (`nawy-nextjs/.env`)
-
-```ini
-NEXT_PUBLIC_API_URL=http://localhost:4000
-```
-
 ### 3️⃣ Install Dependencies
 
 Run the following in both the **backend** (`nawy-web`) and **frontend** (`nawy-nextjs`) directories:
